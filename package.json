@@ -25,7 +25,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint",
+    "lint-fix": "eslint --cache --fix",
+    "prettify": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -73,6 +76,7 @@
     "styled-components.macro": "^1.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md,html,css}": "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write ."
   }
 }
